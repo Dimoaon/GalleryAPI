@@ -27,6 +27,7 @@ class ModalWindow {
             `;
     
             ROOT_MODAL.innerHTML = html;
+            document.body.style.overflow = 'hidden';
             this.eventListener();
         });
     }
@@ -34,6 +35,7 @@ class ModalWindow {
 
     hideModalWindow() {
         ROOT_MODAL.innerHTML = ''
+        document.body.style.overflow = '';
     }
 
     sendComment(event) {
